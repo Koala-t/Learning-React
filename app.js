@@ -23,15 +23,22 @@ var Tab = React.createClass({
 
 // use map to generate the tabs from the tabList
 var Tabs = React.createClass({
+	handleClick: function() {
+		this.props.changeTab(tab);
+	},
 	render: function() {
 		return(
 			<nav>
 				<ul>
 					{this.props.tabList.map(function(tab){
 						return (
-							<Tab url={tab.url} name={tab.name} />
+							<Tab 
+								key={tab.id}
+								handleClick={this.handleClick.bind(this, tab)}
+								url={tab.url}
+								name={tab.name} />
 						);
-					})}
+					}.bind(this)}
 				</ul>
 			</nav>
 		)
@@ -41,6 +48,7 @@ var Tabs = React.createClass({
 // make an app element to hold everything
 
 var App = React.createClass({
+	
 	render: function(){
 		return(
 			<div>
