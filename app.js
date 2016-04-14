@@ -10,9 +10,13 @@ var tabList = [
 
 // make the tabs reference data from tabList
 var Tab = React.createClass({
+	handleClick: function(e) {
+		e.preventDefault();
+		this.props.handleClick();
+	},
 	render: function() {
 		return(
-			<li><a href={this.props.url}>{this.props.name}</a></li>
+			<li><a onClick={this.handleClick} href={this.props.url}>{this.props.name}</a></li>
 		)
 	}
 });
