@@ -1,3 +1,5 @@
+var React = require('react');
+
 // hardcoded data for the tabs
 var tabList = [
 	{ 'id': 1, 'name': 'Mike', 'url': 'http://www.teenagemutantninjaturtles.com/wp-content/uploads/2012/04/Ninja-Turtles-Michelangelo-cover-photo.jpg'},
