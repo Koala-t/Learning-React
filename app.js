@@ -47,6 +47,40 @@ var Tabs = React.createClass({
 	}
 });
 
+//include content
+
+var Content = React.createClass({
+    render: function(){
+        return(
+            <div className="content">
+                {this.props.currentTab === 1 ?
+                <div className="mike">
+                    <img src="http://s.mlkshk.com/r/104TN" />
+                </div>
+                :null}
+
+                {this.props.currentTab === 2 ?
+                <div className="donnie">
+                    <img src="http://s.mlkshk.com/r/103AG" />
+                </div>
+                :null}
+
+                {this.props.currentTab === 3 ?
+                <div className="raph">
+                    <img src="http://s.mlkshk.com/r/JAUD" />
+                </div>
+                :null}
+
+                {this.props.currentTab === 4 ?
+                <div className="leo">
+                    <img src="http://s.mlkshk.com/r/ZJPL" />
+                </div>
+                :null}
+            </div>
+        );
+    }
+});
+
 // make an app element to hold everything
 
 var App = React.createClass({
