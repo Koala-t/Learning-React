@@ -16,7 +16,9 @@ var Tab = React.createClass({
 	},
 	render: function() {
 		return(
-			<li><a onClick={this.handleClick} href={this.props.url}>{this.props.name}</a></li>
+			<li className={this.props.isCurrent ? 'current' : null}>
+				<a onClick={this.handleClick} href={this.props.url}>{this.props.name}</a>
+			</li>
 		)
 	}
 });
@@ -48,11 +50,22 @@ var Tabs = React.createClass({
 // make an app element to hold everything
 
 var App = React.createClass({
-	
+	getInitialState: function () {
+		return {
+			tabs: tabs;
+			currentTab: 1
+		};
+	},
+	changeTab: function(tab) {
+		this.setState({currentTab: tab.id});
+	},
 	render: function(){
 		return(
 			<div>
-				<Tabs tabList={tabList} />
+				<Tabs 
+					currentTab={this.state.currentTab}
+					tabList={this.state.tabs} />
+					changeTab={this.changeTab} 
 			</div>
 		)
 	}
