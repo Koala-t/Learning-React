@@ -1,0 +1,23 @@
+{
+  "name": "tabs",
+  "version": "1.0.0",
+  "description": "This is the result of following along with this react tutorial on making dynamic tabs: http://codepen.io/trey/post/tabbed-navigation-react",
+  "main": "tabs.js",
+  "dependencies": {
+    "react": "^15.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koala-t/Learning-React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Koala-t/Learning-React/issues"
+  },
+  "homepage": "https://github.com/Koala-t/Learning-React#readme"
+}
